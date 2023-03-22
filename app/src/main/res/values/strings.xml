@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="helloText">Hello, play Doge Game</string>
+    <string name="startButton">Hello</string>
+    <string name="gameStart">Play</string>
+    <string name="gameName">Doge game</string>
+    <string name="gameInfo">Find Doge</string>
+    <string name="score">Score:</string>
+    <string name="title_activity_main2">Hello World</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Location</string>
+    <string name="text_dashboard">Location details</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="latitude">Latitude(north-south-location)</string>
+    <string name="longitude">Longitude(west-east-location)</string>
+    <string name="address">Address</string>
+    <string name="locationButton">Show your location on map</string>
+</resources>

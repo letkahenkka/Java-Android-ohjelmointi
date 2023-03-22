@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hei Maailma</string>
+    <string name="helloText">Terve, pelaa Doge-peliä</string>
+    <string name="startButton">Terve</string>
+    <string name="gameStart">Pelaa</string>
+    <string name="gameName">Doge-peli</string>
+    <string name="gameInfo">Etsi Doge</string>
+    <string name="score">Pisteet:</string>
+    <string name="title_activity_main2">Hei Maailma</string>
+    <string name="title_home">Koti</string>
+    <string name="title_dashboard">Sijaintitiedot</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="text_dashboard">Sijaintitietosi</string>
+    <string name="latitude">Leveysaste</string>
+    <string name="longitude">Pituusaste</string>
+    <string name="address">Osoite</string>
+    <string name="locationButton">Näytä sijaintisi kartalla</string>
+</resources>

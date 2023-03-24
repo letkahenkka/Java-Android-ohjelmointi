@@ -18,6 +18,7 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
+    public static final String TAG="GameActivity";
     private ImageButton imagebutton1;
     private ImageButton imagebutton2;
     private ImageButton imagebutton3;

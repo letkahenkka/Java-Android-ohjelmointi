@@ -6,17 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
+    <TextClock
+        android:id="@+id/text_clock"
+        android:layout_width="243dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="66dp"
+        android:format24Hour="dd.MM.yyyy h:mm"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonGroup"
+        android:layout_width="274dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginBottom="177dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:singleSelection = "true">
+
+        <Button
+            android:id="@+id/timerPause"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAUSE"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="522dp" />
+
+        <Button
+            android:id="@+id/timerStart"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="522dp" />
+
+        <Button
+            android:id="@+id/timerStop"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STOP"
+            tools:layout_editor_absoluteX="238dp"
+            tools:layout_editor_absoluteY="522dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299"></NumberPicker>
+
     <TextView
-        android:id="@+id/text_notifications"
+        android:id="@+id/timer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:text=""
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.494" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

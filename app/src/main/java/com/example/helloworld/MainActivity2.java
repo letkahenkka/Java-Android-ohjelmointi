@@ -1,6 +1,10 @@
 package com.example.helloworld;
 
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -14,7 +18,9 @@ import com.example.helloworld.databinding.ActivityMain2Binding;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity2";
     private ActivityMain2Binding binding;
+    private AirPlaneModeReceiver apm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +28,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        apm = new AirPlaneModeReceiver();
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -34,4 +42,17 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e(TAG, "onStart() metodissa");
+        IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        registerReceiver(apm, filter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(apm);
+    }
 }

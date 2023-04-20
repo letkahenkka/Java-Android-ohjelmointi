@@ -2,11 +2,13 @@ package com.example.helloworld.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,11 +19,16 @@ import com.example.helloworld.GameActivity;
 import com.example.helloworld.R;
 import com.example.helloworld.databinding.FragmentHomeBinding;
 
+import YTJ.DataActivity;
+
 public class HomeFragment extends Fragment {
 
     private Button startButton;
     private TextView helloText;
     private Button gameStart;
+
+    private Button searchCompanyButton;
+    private EditText searchText;
 
     public static final String TAG="MainActivity";
     private FragmentHomeBinding binding;
@@ -38,6 +45,8 @@ public class HomeFragment extends Fragment {
         helloText = root.findViewById(R.id.helloText);
         helloText.setVisibility(View.INVISIBLE);
         gameStart = root.findViewById(R.id.gameStart);
+        searchCompanyButton = root.findViewById(R.id.searchButton);
+        searchText = root.findViewById(R.id.searchField);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +65,16 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Log.i(TAG, "Game started");
                 Intent i = new Intent(view.getContext(), GameActivity.class);
+                startActivity(i);
+            }
+        });
+
+        searchCompanyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), DataActivity.class);
+                Log.i(TAG, searchText.getText().toString());
+                i.putExtra("searchField", searchText.getText().toString());
                 startActivity(i);
             }
         });

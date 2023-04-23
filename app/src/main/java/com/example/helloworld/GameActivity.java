@@ -37,13 +37,13 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         Random random = new Random();
 
         int rand_int = random.nextInt(3);
 
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.roundanimation);
-        myPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         imagebutton1 = findViewById(R.id.imageButton1);
         imagebutton2 = findViewById(R.id.imageButton2);

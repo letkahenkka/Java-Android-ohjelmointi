@@ -10,10 +10,13 @@
     <string name="title_activity_main2">Hei Maailma</string>
     <string name="title_home">Koti</string>
     <string name="title_dashboard">Sijaintitiedot</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Ajastin</string>
     <string name="text_dashboard">Sijaintitietosi</string>
     <string name="latitude">Leveysaste</string>
     <string name="longitude">Pituusaste</string>
     <string name="address">Osoite</string>
     <string name="locationButton">Näytä sijaintisi kartalla</string>
+    <string name="timerStart">ALOITA</string>
+    <string name="timerPause">TAUKO</string>
+    <string name="timerStop">PYSÄYTÄ</string>
 </resources>

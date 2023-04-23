@@ -20,20 +20,20 @@
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggleButtonGroup"
-        android:layout_width="274dp"
+        android:layout_width="280dp"
         android:layout_height="60dp"
         android:layout_marginStart="69dp"
         android:layout_marginBottom="177dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:singleSelection = "true">
+        app:singleSelection="true">
 
         <Button
             android:id="@+id/timerPause"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PAUSE"
+            android:text="@string/timerPause"
             tools:layout_editor_absoluteX="151dp"
             tools:layout_editor_absoluteY="522dp" />
 
@@ -42,7 +42,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="START"
+            android:text="@string/timerStart"
             tools:layout_editor_absoluteX="63dp"
             tools:layout_editor_absoluteY="522dp" />
 
@@ -51,7 +51,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="STOP"
+            android:text="@string/timerStop"
             tools:layout_editor_absoluteX="238dp"
             tools:layout_editor_absoluteY="522dp" />
 

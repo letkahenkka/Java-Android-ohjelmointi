@@ -85,9 +85,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         TextView companyForm = holder.companyForm;
 
         companyName.setText(dataSet.get(listPosition).getName());
-        companyId.setText(dataSet.get(listPosition).getId());
-        companyRegDate.setText(dataSet.get(listPosition).getRegistrationDate());
-        companyForm.setText(dataSet.get(listPosition).getCompanyForm());
+        companyId.setText("Y-tunnus: " + dataSet.get(listPosition).getId());
+        companyRegDate.setText("Rek.pvm: " + dataSet.get(listPosition).getRegistrationDate());
+        companyForm.setText("Yhtiömuoto: " + dataSet.get(listPosition).getCompanyForm());
     }
 
     @Override

@@ -1,5 +1,5 @@
 # HelloWorld
-Java, android-ohjelmointi
+Java, android-ohjelmointi-kurssi
 
 Sovelluksessa pieni Guess-peli, sijainnin haku, ajastin sekä YTJ-rajapintahaku.
 
